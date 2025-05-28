@@ -53,7 +53,7 @@ const Days = (props: Props) => {
 
     const activeDateData = useCallback(
         (day: Date) => {
-            let className = "";
+            let className = "bg-secondary-100";
 
             const dayIsSameStart = period.start && dateIsSame(day, period.start, "date");
             const dayIsSameEnd = period.end && dateIsSame(day, period.end, "date");
@@ -63,13 +63,14 @@ const Days = (props: Props) => {
                 className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium rounded-full`;
             } else if (dayIsSameStart) {
                 className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium ${
-                    dayIsSameHoverDay && !period.end ? "rounded-full" : "rounded-l-full"
+                    dayIsSameHoverDay && !period.end ? "rounded-full" : "rounded-full"
                 }`;
             } else if (dayIsSameEnd) {
                 className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium ${
-                    dayIsSameHoverDay && !period.start ? "rounded-full" : "rounded-r-full"
+                    dayIsSameHoverDay && !period.start ? "rounded-full" : "rounded-full"
                 }`;
             }
+            // text-secondary-700 font-medium
 
             return {
                 active: dayIsSameStart || dayIsSameEnd,
@@ -87,9 +88,7 @@ const Days = (props: Props) => {
                 if (
                     dateIsBetween(day, period.start, period.end, "day", { start: true, end: false })
                 ) {
-                    return ` ${BG_COLOR["100"][primaryColor]} ${currentDateClass(
-                        day
-                    )} dark:bg-white/10`;
+                    return `bg-secondary-100 ${currentDateClass(day)}`;
                 }
             }
 
@@ -101,25 +100,19 @@ const Days = (props: Props) => {
                 period.start &&
                 dateIsBetween(day, period.start, dayHover, "day", { start: true, end: false })
             ) {
-                className = ` ${BG_COLOR["100"][primaryColor]} ${currentDateClass(
-                    day
-                )} dark:bg-white/10`;
+                className = `bg-secondary-100 ${currentDateClass(day)} `;
             }
 
             if (
                 period.end &&
                 dateIsBetween(day, dayHover, period.end, "day", { start: true, end: false })
             ) {
-                className = ` ${BG_COLOR["100"][primaryColor]} ${currentDateClass(
-                    day
-                )} dark:bg-white/10`;
+                className = `bg-secondary-100 ${currentDateClass(day)} `;
             }
 
             if (dateIsSame(dayHover, day, "date")) {
                 const bgColor = BG_COLOR["500"][primaryColor];
-                className = ` transition-all duration-500 text-white font-medium ${bgColor} ${
-                    period.start ? "rounded-r-full" : "rounded-l-full"
-                }`;
+                className = ` transition-all duration-500 text-white font-medium ${bgColor} rounded-full`;
             }
 
             return className;

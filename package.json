@@ -1,6 +1,9 @@
 {
-    "name": "react-tailwindcss-datepicker",
-    "version": "2.0.0",
+    "name": "@birkan-dogan-upu/react-tailwindcss-datepicker",
+    "version": "1.0.1",
+    "publishConfig": {
+        "access": "public"
+    },
     "description": "A modern React Datepicker using Tailwind CSS 3",
     "main": "dist/index.cjs.js",
     "module": "dist/index.esm.js",
@@ -45,7 +48,7 @@
         "@rollup/plugin-typescript": "^12.1.2",
         "@tailwindcss/forms": "^0.5.7",
         "@types/node": "^22.3.0",
-        "@types/react": "^19.0.8",
+        "@types/react": "^18.2.0",
         "@typescript-eslint/eslint-plugin": "^8.22.0",
         "@typescript-eslint/parser": "^8.22.0",
         "autoprefixer": "^10.4.20",

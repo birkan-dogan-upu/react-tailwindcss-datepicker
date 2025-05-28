@@ -416,13 +416,15 @@ const Datepicker = (props: DatepickerType) => {
                 <div className={popupClassNameOverload} ref={calendarContainerRef}>
                     <Arrow ref={arrowRef} />
 
-                    <div className="mt-2.5 shadow-sm border border-gray-300 px-1 py-0.5 bg-white dark:bg-slate-800 dark:text-white dark:border-slate-600 rounded-lg">
+                    <div
+                        className={`mt-2.5 shadow-sm ${useRange && "border border-gray-300"} px-1 py-0.5 bg-white rounded-lg`}
+                    >
                         <div className="flex flex-col lg:flex-row py-2">
                             {showShortcuts && <Shortcuts />}
 
                             <div
-                                className={`flex items-stretch flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-1.5 ${
-                                    showShortcuts ? "md:pl-2" : "md:pl-1"
+                                className={`flex items-stretch flex-col tx2:flex-row space-y-4 tx2:space-y-0 tx2:space-x-1.5 ${
+                                    showShortcuts ? "tx2:pl-2" : "tx2:pl-1"
                                 } pr-2 lg:pr-1`}
                             >
                                 <Calendar

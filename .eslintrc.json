@@ -36,7 +36,7 @@
     ],
     "rules": {
         "indent": "off",
-        "no-console": "warn",
+        // "no-console": "warn",
         "quotes": "error",
         "semi": "error",
         "import/order": [
@@ -59,7 +59,7 @@
         {
             "files": ["app/page.tsx"],
             "rules": {
-                "no-console": "off"
+                // "no-console": "off"
             }
         }
     ]

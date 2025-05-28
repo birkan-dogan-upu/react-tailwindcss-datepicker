@@ -16,10 +16,7 @@ import {
     previousDaysInWeek,
     weekDayStringToIndex
 } from "../../libs/date";
-import ChevronLeftIcon from "../icons/ChevronLeftIcon";
-import ChevronRightIcon from "../icons/ChevronRightIcon";
 import DoubleChevronLeftIcon from "../icons/DoubleChevronLeftIcon";
-import DoubleChevronRightIcon from "../icons/DoubleChevronRightIcon";
 import RoundedButton from "../RoundedButton";
 
 import Days from "./Days";
@@ -27,6 +24,8 @@ import Months from "./Months";
 import Week from "./Week";
 import Years from "./Years";
 
+import DoubleChevronRightIcon from "components/icons/DoubleChevronRightIcon";
+import { ShortcutLeftArrow, ShortcutRightArrow } from "components/icons/ShortcutArrows";
 import { DateType } from "types";
 
 const NUMBER_YEARS_SHOW = 12;
@@ -239,12 +238,13 @@ const Calendar = (props: Props) => {
     }, [maxDate, minDate]);
 
     return (
-        <div className="w-full md:w-[296px] md:min-w-[296px]">
-            <div className="flex items-center space-x-1.5 border border-gray-300 dark:border-gray-700 rounded-md px-2 py-1.5">
+        <div className="w-full tx2:w-[296px] tx2:min-w-[296px]">
+            <div className="flex items-center space-x-1.5 dark:border-gray-700 rounded-md px-2 py-1.5">
                 {!showMonths && !showYears && (
                     <div className="flex-none">
                         <RoundedButton roundedFull={true} onClick={onClickPrevious}>
-                            <ChevronLeftIcon className="h-5 w-5" />
+                            {/* <ChevronLeftIcon className="h-5 w-5" /> */}
+                            <ShortcutLeftArrow />
                         </RoundedButton>
                     </div>
                 )}
@@ -263,7 +263,7 @@ const Calendar = (props: Props) => {
                 )}
 
                 <div className="flex flex-1 items-center space-x-1.5">
-                    <div className="w-1/2">
+                    <div className="w-1/2 flex justify-center items-center text-secondary-700 font-semibold text-base">
                         <RoundedButton
                             onClick={() => {
                                 setShowMonths(!showMonths);
@@ -274,7 +274,7 @@ const Calendar = (props: Props) => {
                         </RoundedButton>
                     </div>
 
-                    <div className="w-1/2">
+                    <div className="w-1/2 flex justify-center items-center text-secondary-700 font-semibold text-base">
                         <RoundedButton
                             onClick={() => {
                                 setShowYears(!showYears);
@@ -302,13 +302,14 @@ const Calendar = (props: Props) => {
                 {!showMonths && !showYears && (
                     <div className="flex-none">
                         <RoundedButton roundedFull={true} onClick={onClickNext}>
-                            <ChevronRightIcon className="h-5 w-5" />
+                            {/* <ChevronRightIcon className="h-5 w-5" /> */}
+                            <ShortcutRightArrow />
                         </RoundedButton>
                     </div>
                 )}
             </div>
 
-            <div className="px-0.5 sm:px-2 mt-0.5 min-h-[285px]">
+            <div className="px-0.5 tx3:px-2 mt-0.5 min-h-[285px]">
                 {showMonths && (
                     <Months currentMonth={date.getMonth() + 1} clickMonth={clickMonth} />
                 )}

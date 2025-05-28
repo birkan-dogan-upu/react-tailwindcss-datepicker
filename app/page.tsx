@@ -29,7 +29,7 @@ export default function Playground() {
     const [asSingle, setAsSingle] = useState(false);
     const [placeholder, setPlaceholder] = useState("");
     const [separator, setSeparator] = useState("~");
-    const [i18n, setI18n] = useState("en");
+    const [i18n, setI18n] = useState("tr");
     const [disabled, setDisabled] = useState(false);
     const [inputClassName, setInputClassName] = useState("");
     const [containerClassName, setContainerClassName] = useState("");
@@ -145,8 +145,8 @@ export default function Playground() {
                 />
             </div>
             <div className="py-4 max-w-3xl mx-auto flex flex-row flex-wrap">
-                <div className="w-full sm:w-1/3 pr-2 flex flex-row flex-wrap sm:flex-col">
-                    <div className="mb-2 w-1/2 sm:w-full">
+                <div className="w-full tx3:w-1/3 pr-2 flex flex-row flex-wrap tx3:flex-col">
+                    <div className="mb-2 w-1/2 tx3:w-full">
                         <div className="inline-flex items-center">
                             <input
                                 type="checkbox"
@@ -160,7 +160,7 @@ export default function Playground() {
                             </label>
                         </div>
                     </div>
-                    <div className="mb-2 w-1/2 sm:w-full">
+                    <div className="mb-2 w-1/2 tx3:w-full">
                         <div className="inline-flex items-center">
                             <input
                                 type="checkbox"
@@ -174,7 +174,7 @@ export default function Playground() {
                             </label>
                         </div>
                     </div>
-                    <div className="mb-2 w-1/2 sm:w-full">
+                    <div className="mb-2 w-1/2 tx3:w-full">
                         <div className="inline-flex items-center">
                             <input
                                 type="checkbox"
@@ -188,7 +188,7 @@ export default function Playground() {
                             </label>
                         </div>
                     </div>
-                    <div className="mb-2 w-1/2 sm:w-full">
+                    <div className="mb-2 w-1/2 tx3:w-full">
                         <div className="inline-flex items-center">
                             <input
                                 type="checkbox"
@@ -202,7 +202,7 @@ export default function Playground() {
                             </label>
                         </div>
                     </div>
-                    <div className="mb-2 w-1/2 sm:w-full">
+                    <div className="mb-2 w-1/2 tx3:w-full">
                         <div className="inline-flex items-center">
                             <input
                                 type="checkbox"
@@ -216,7 +216,7 @@ export default function Playground() {
                             </label>
                         </div>
                     </div>
-                    <div className="mb-2 w-1/2 sm:w-full">
+                    <div className="mb-2 w-1/2 tx3:w-full">
                         <div className="inline-flex items-center">
                             <input
                                 type="checkbox"
@@ -230,7 +230,7 @@ export default function Playground() {
                             </label>
                         </div>
                     </div>
-                    <div className="mb-2 w-1/2 sm:w-full">
+                    <div className="mb-2 w-1/2 tx3:w-full">
                         <div className="inline-flex items-center">
                             <input
                                 type="checkbox"
@@ -246,7 +246,7 @@ export default function Playground() {
                     </div>
                 </div>
 
-                <div className="w-full sm:w-1/3 pr-2 flex flex-col">
+                <div className="w-full tx3:w-1/3 pr-2 flex flex-col">
                     <div className="mb-2">
                         <label className="block" htmlFor="primaryColor">
                             Primary Color
@@ -363,7 +363,7 @@ export default function Playground() {
                     </div>
                 </div>
 
-                <div className="w-full sm:w-1/3 pr-2 flex flex-col">
+                <div className="w-full tx3:w-1/3 pr-2 flex flex-col">
                     <div className="mb-2">
                         <label className="block" htmlFor="i18n">
                             i18n
@@ -477,7 +477,7 @@ export default function Playground() {
                     </div>
                 </div>
 
-                <div className="w-full sm:w-2/3 pr-2 flex flex-col ml-auto">
+                <div className="w-full tx3:w-2/3 pr-2 flex flex-col ml-auto">
                     <hr className="my-3" />
 
                     <h1 className="mb-2 text-lg font-semibold text-center col-span-3">
@@ -491,7 +491,7 @@ export default function Playground() {
                             </label>
 
                             <input
-                                className="rounded border px-4 py-2 border-gray-200 sm:w-full w-full"
+                                className="rounded border px-4 py-2 border-gray-200 tx3:w-full w-full"
                                 id="startDate"
                                 type="date"
                                 value={newDisabledDates.startDate}
@@ -513,7 +513,7 @@ export default function Playground() {
                             </label>
 
                             <input
-                                className="rounded border px-4 py-2 border-gray-200 sm:w-full w-full"
+                                className="rounded border px-4 py-2 border-gray-200 tx3:w-full w-full"
                                 id="endDate"
                                 type="date"
                                 value={newDisabledDates.endDate}
