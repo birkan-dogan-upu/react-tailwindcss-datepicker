@@ -24,7 +24,7 @@ const RoundedButton = (props: ButtonProps) => {
             : "";
         const defaultClass = !roundedFull
             ? `w-full tracking-wide ${activeClass} transition-all duration-300 px-3 ${padding} uppercase hover:${BG_COLOR["500"][primaryColor]} hover:${TEXT_COLOR["500"][primaryColor]} rounded-lg focus:ring-1`
-            : `${activeClass} transition-all duration-300 hover:${BG_COLOR["500"][primaryColor]} hover:${TEXT_COLOR["500"][primaryColor]}rounded-lg p-[0.45rem] focus:ring-1`;
+            : `${activeClass} transition-all duration-300 hover:${BG_COLOR["500"][primaryColor]} hover:${TEXT_COLOR["500"][primaryColor]} rounded-lg p-[0.45rem] focus:ring-1`;
         const buttonFocusColor =
             BUTTON_COLOR.focus[primaryColor as keyof typeof BUTTON_COLOR.focus];
         const disabledClass = disabled ? "line-through" : "";

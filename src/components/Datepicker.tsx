@@ -414,7 +414,7 @@ const Datepicker = (props: DatepickerType) => {
                 <Input />
 
                 <div className={popupClassNameOverload} ref={calendarContainerRef}>
-                    <Arrow ref={arrowRef} />
+                    {useRange ? <Arrow ref={arrowRef} /> : <div ref={arrowRef}></div>}
 
                     <div
                         className={`mt-2.5 shadow-sm ${useRange && "border border-gray-300"} px-1 py-0.5 bg-white rounded-lg`}

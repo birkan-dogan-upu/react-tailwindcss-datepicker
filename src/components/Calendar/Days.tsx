@@ -60,13 +60,13 @@ const Days = (props: Props) => {
             const dayIsSameHoverDay = dayHover && dateIsSame(day, dayHover, "date");
 
             if (dayIsSameStart && dayIsSameEnd) {
-                className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium rounded-full`;
+                className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium rounded-full z-50`;
             } else if (dayIsSameStart) {
-                className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium ${
+                className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium z-50 ${
                     dayIsSameHoverDay && !period.end ? "rounded-full" : "rounded-full"
                 }`;
             } else if (dayIsSameEnd) {
-                className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium ${
+                className = ` ${BG_COLOR["500"][primaryColor]} text-white font-medium z-50 ${
                     dayIsSameHoverDay && !period.start ? "rounded-full" : "rounded-full"
                 }`;
             }
@@ -88,7 +88,7 @@ const Days = (props: Props) => {
                 if (
                     dateIsBetween(day, period.start, period.end, "day", { start: true, end: false })
                 ) {
-                    return `bg-secondary-100 ${currentDateClass(day)}`;
+                    return `bg-secondary-100 rounded-md ${currentDateClass(day)}`;
                 }
             }
 

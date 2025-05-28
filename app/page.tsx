@@ -23,7 +23,7 @@ export default function Playground() {
         endDate: null
     });
     const [primaryColor, setPrimaryColor] = useState("blue");
-    const [useRange, setUseRange] = useState(true);
+    const [useRange, setUseRange] = useState(false);
     const [showFooter, setShowFooter] = useState(false);
     const [showShortcuts, setShowShortcuts] = useState(false);
     const [asSingle, setAsSingle] = useState(false);
