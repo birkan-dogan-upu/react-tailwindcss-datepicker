@@ -419,7 +419,7 @@ const Datepicker = (props: DatepickerType) => {
                     <div
                         className={`mt-2.5 shadow-sm ${useRange && "border border-gray-300"} px-1 py-0.5 bg-white rounded-lg`}
                     >
-                        <div className="flex flex-col lg:flex-row py-2">
+                        <div className="flex flex-col xl:flex-row py-2">
                             {showShortcuts && <Shortcuts />}
 
                             <div

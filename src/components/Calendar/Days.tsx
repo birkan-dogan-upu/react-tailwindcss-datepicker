@@ -169,7 +169,8 @@ const Days = (props: Props) => {
 
     const buttonClass = useCallback(
         (day: Date, type: "current" | "next" | "previous") => {
-            const baseClass = "flex items-center justify-center w-12 h-12 lg:w-10 lg:h-10";
+            const baseClass =
+                "flex items-center justify-center min-h-10 min-w-10 w-10 h-10 xl:w-10 xl:h-10";
             if (type === "current") {
                 return cn(
                     baseClass,

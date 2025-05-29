@@ -265,7 +265,7 @@ const Input = () => {
     }, [calendarContainer, arrowContainer, popoverDirection]);
 
     return (
-        <>
+        <div className="flex justify-between">
             <input
                 ref={inputRef}
                 type="text"
@@ -295,7 +295,7 @@ const Input = () => {
             >
                 {renderToggleIcon(inputText == null || !inputText?.length)}
             </button>
-        </>
+        </div>
     );
 };
 
