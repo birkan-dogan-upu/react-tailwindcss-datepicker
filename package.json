@@ -1,6 +1,6 @@
 {
     "name": "@birkan-dogan-upu/react-tailwindcss-datepicker",
-    "version": "12.7.7",
+    "version": "12.7.8",
     "publishConfig": {
         "access": "public"
     },

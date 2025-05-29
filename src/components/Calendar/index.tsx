@@ -238,7 +238,7 @@ const Calendar = (props: Props) => {
     }, [maxDate, minDate]);
 
     return (
-        <div className="w-full tx2:w-[285px] tx2:min-w-[285px]">
+        <div className="w-full tx2:w-[284px] tx2:min-w-[284px]">
             <div className="flex items-center space-x-1.5 dark:border-gray-700 rounded-md px-2 py-1.5">
                 {!showMonths && !showYears && (
                     <div className="flex-none">
