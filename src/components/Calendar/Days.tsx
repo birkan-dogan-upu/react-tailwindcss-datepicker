@@ -88,7 +88,7 @@ const Days = (props: Props) => {
                 if (
                     dateIsBetween(day, period.start, period.end, "day", { start: true, end: false })
                 ) {
-                    return `bg-secondary-100 rounded-md ${currentDateClass(day)}`;
+                    return `bg-secondary-100 ${currentDateClass(day)}`;
                 }
             }
 
