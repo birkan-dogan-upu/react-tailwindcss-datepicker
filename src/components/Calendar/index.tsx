@@ -1,6 +1,6 @@
 import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 
-import { START_WEEK } from "../../constants";
+import { DEFAULT_COLOR, START_WEEK } from "../../constants";
 import DatepickerContext from "../../contexts/DatepickerContext";
 import {
     allDaysInMonth,
@@ -16,7 +16,6 @@ import {
     previousDaysInWeek,
     weekDayStringToIndex
 } from "../../libs/date";
-import DoubleChevronLeftIcon from "../icons/DoubleChevronLeftIcon";
 import RoundedButton from "../RoundedButton";
 
 import Days from "./Days";
@@ -24,7 +23,6 @@ import Months from "./Months";
 import Week from "./Week";
 import Years from "./Years";
 
-import DoubleChevronRightIcon from "components/icons/DoubleChevronRightIcon";
 import { ShortcutLeftArrow, ShortcutRightArrow } from "components/icons/ShortcutArrows";
 import { DateType } from "types";
 
@@ -257,7 +255,8 @@ const Calendar = (props: Props) => {
                                 setYear(year - NUMBER_YEARS_SHOW);
                             }}
                         >
-                            <DoubleChevronLeftIcon className="h-5 w-5" />
+                            {/* <DoubleChevronLeftIcon className="h-5 w-5" /> */}
+                            <ShortcutLeftArrow />
                         </RoundedButton>
                     </div>
                 )}
@@ -294,7 +293,8 @@ const Calendar = (props: Props) => {
                                 setYear(year + NUMBER_YEARS_SHOW);
                             }}
                         >
-                            <DoubleChevronRightIcon className="h-5 w-5" />
+                            {/* <DoubleChevronRightIcon className="h-5 w-5" /> */}
+                            <ShortcutRightArrow color={DEFAULT_COLOR} />
                         </RoundedButton>
                     </div>
                 )}
@@ -303,7 +303,7 @@ const Calendar = (props: Props) => {
                     <div className="flex-none">
                         <RoundedButton roundedFull={true} onClick={onClickNext}>
                             {/* <ChevronRightIcon className="h-5 w-5" /> */}
-                            <ShortcutRightArrow />
+                            <ShortcutRightArrow color={DEFAULT_COLOR} />
                         </RoundedButton>
                     </div>
                 )}

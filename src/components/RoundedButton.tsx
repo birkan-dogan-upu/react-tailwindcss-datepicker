@@ -22,14 +22,16 @@ const RoundedButton = (props: ButtonProps) => {
         const activeClass = active
             ? `font-semibold bg-gray-50 ${TEXT_COLOR["500"][primaryColor]}`
             : "";
+
         const defaultClass = !roundedFull
-            ? `w-full tracking-wide ${activeClass} transition-all duration-300 px-3 ${padding} uppercase rounded-lg focus:ring-1`
-            : `${activeClass} transition-all duration-300 rounded-lg p-[0.45rem] focus:ring-1`;
-        const buttonFocusColor =
-            BUTTON_COLOR.focus[primaryColor as keyof typeof BUTTON_COLOR.focus];
+            ? `w-full tracking-wide ${activeClass} transition-all duration-300 px-3 ${padding} uppercase rounded-lg`
+            : `${activeClass} transition-all duration-300 rounded-lg p-[0.45rem]`;
+
+        const hoverColor = BUTTON_COLOR.hover?.[primaryColor as keyof typeof BUTTON_COLOR.hover];
+
         const disabledClass = disabled ? "line-through" : "";
 
-        return `${defaultClass} ${buttonFocusColor} ${disabledClass}`;
+        return `${defaultClass}  hover:${hoverColor} ${disabledClass}`;
     }, [disabled, padding, primaryColor, roundedFull, active]);
 
     return (

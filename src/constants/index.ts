@@ -280,5 +280,24 @@ export const BUTTON_COLOR: Colors = {
         fuchsia: "focus:ring-fuchsia-500/50 focus:bg-fuchsia-100/50",
         pink: "focus:ring-pink-500/50 focus:bg-pink-100/50",
         rose: "focus:ring-rose-500/50 focus:bg-rose-100/50"
+    },
+    hover: {
+        blue: "hover:ring-blue-500/50 hover:bg-blue-100/50 hover:text-blue-500",
+        orange: "hover:ring-orange-500/50 hover:bg-orange-100/50 hover:text-orange-500",
+        yellow: "hover:ring-yellow-500/50 hover:bg-yellow-100/50",
+        red: "hover:ring-red-500/50 hover:bg-red-100/50",
+        purple: "hover:border-primary-500 hover:bg-primary-100/50 hover:text-primary-500",
+        amber: "hover:ring-[#b54707]/50 hover:bg-[#fef3c7]/50 hover:text-[#b54707]",
+        lime: "hover:ring-lime-500/50 hover:bg-lime-100/50",
+        green: "hover:ring-green-500/50 hover:bg-green-100/50",
+        emerald: "hover:ring-[#107569]/50 hover:bg-[#d1fae5]/50 hover:text-[#107569]",
+        teal: "hover:ring-teal-500/50 hover:bg-teal-100/50",
+        cyan: "hover:ring-cyan-500/50 hover:bg-cyan-100/50",
+        sky: "hover:ring-sky-500/50 hover:bg-sky-100/50",
+        indigo: "hover:ring-indigo-500/50 hover:bg-indigo-100/50",
+        violet: "hover:ring-violet-500/50 hover:bg-violet-100/50",
+        fuchsia: "hover:ring-fuchsia-500/50 hover:bg-fuchsia-100/50",
+        pink: "hover:ring-pink-500/50 hover:bg-pink-100/50",
+        rose: "hover:ring-rose-500/50 hover:bg-rose-100/50"
     }
 };
