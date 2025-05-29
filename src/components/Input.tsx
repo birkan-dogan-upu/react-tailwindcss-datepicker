@@ -253,8 +253,6 @@ const Input = () => {
         };
     }, [calendarContainer, arrowContainer, popoverDirection]);
 
-    console.log(inputText);
-
     return (
         <div className="flex justify-between">
             <input
@@ -285,9 +283,9 @@ const Input = () => {
                 className={getToggleClassName()}
             >
                 {inputText.length ? (
-                    <CloseIcon className="absolute right-0 bottom-2.5 h-5 px-3 text-secondary-600 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" />
+                    <CloseIcon className="absolute right-0 bottom-2.5 h-5 px-3 text-secondary-500 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" />
                 ) : (
-                    <DateIcon className="absolute right-0 bottom-2.5 h-5 px-3 text-secondary-600 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" />
+                    <DateIcon className="absolute right-0 bottom-2.5 h-5 px-3 text-secondary-500 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" />
                 )}
             </button>
         </div>

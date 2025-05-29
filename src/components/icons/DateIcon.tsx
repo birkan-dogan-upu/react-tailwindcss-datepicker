@@ -1,7 +1,7 @@
 import { IconProps } from "../../types";
 
 const DateIcon = (props: IconProps) => {
-    const { className = "w-4 h-4 text-secondary-400" } = props;
+    const { className = "w-5 h-5 text-secondary-400" } = props;
 
     return (
         <svg
