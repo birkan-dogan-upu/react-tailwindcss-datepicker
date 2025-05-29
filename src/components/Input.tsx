@@ -5,7 +5,8 @@ import DatepickerContext from "../contexts/DatepickerContext";
 import { dateAdd, dateIsBefore, dateStringToDate } from "../libs/date";
 import { DateType } from "../types";
 
-import ToggleButton from "./ToggleButton";
+import CloseIcon from "./icons/CloseIcon";
+import DateIcon from "./icons/DateIcon";
 
 const Input = () => {
     // Context
@@ -26,7 +27,6 @@ const Input = () => {
         disabled,
         inputClassName,
         toggleClassName,
-        toggleIcon,
         readOnly,
         displayFormat,
         inputId,
@@ -128,17 +128,6 @@ const Input = () => {
             }
         },
         [hideDatepicker]
-    );
-
-    const renderToggleIcon = useCallback(
-        (isEmpty: boolean) => {
-            return typeof toggleIcon === "undefined" ? (
-                <ToggleButton isEmpty={isEmpty} />
-            ) : (
-                toggleIcon(isEmpty)
-            );
-        },
-        [toggleIcon]
     );
 
     const getToggleClassName = useCallback(() => {
@@ -264,6 +253,8 @@ const Input = () => {
         };
     }, [calendarContainer, arrowContainer, popoverDirection]);
 
+    console.log(inputText);
+
     return (
         <div className="flex justify-between">
             <input
@@ -293,7 +284,11 @@ const Input = () => {
                 disabled={disabled}
                 className={getToggleClassName()}
             >
-                {renderToggleIcon(inputText == null || !inputText?.length)}
+                {inputText.length ? (
+                    <CloseIcon className="absolute right-0 bottom-2.5 h-5 px-3 text-secondary-600 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" />
+                ) : (
+                    <DateIcon className="absolute right-0 bottom-2.5 h-5 px-3 text-secondary-600 focus:outline-none disabled:opacity-40 disabled:cursor-not-allowed" />
+                )}
             </button>
         </div>
     );

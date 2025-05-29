@@ -1,7 +1,7 @@
 import { IconProps } from "../../types";
 
 const CloseIcon = (props: IconProps) => {
-    const { className = "w-6 h-6" } = props;
+    const { className = "w-4 h-4" } = props;
     return (
         <svg
             className={className}
