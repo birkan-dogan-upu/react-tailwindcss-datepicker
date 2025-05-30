@@ -29,7 +29,7 @@ import {
 } from "../libs/date";
 import { Period, DatepickerType, ColorKeys, DateType } from "../types";
 
-// import Arrow from "./icons/Arrow";
+import Arrow from "./icons/Arrow";
 import VerticalDash from "./VerticalDash";
 
 const Datepicker = (props: DatepickerType) => {
@@ -414,7 +414,7 @@ const Datepicker = (props: DatepickerType) => {
                 <Input />
 
                 <div className={popupClassNameOverload} ref={calendarContainerRef}>
-                    {/* {useRange ? <Arrow ref={arrowRef} /> : <div ref={arrowRef}></div>} */}
+                    {useRange ? <Arrow ref={arrowRef} /> : <div ref={arrowRef}></div>}
 
                     <div
                         className={`mt-2.5 shadow-sm ${useRange && "border border-gray-300"} px-1 py-0.5 bg-white rounded-lg`}
