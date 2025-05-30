@@ -122,7 +122,7 @@ const Datepicker = (props: DatepickerType) => {
                 arrow.classList.remove("border-r");
                 arrow.classList.remove("border-b");
                 arrow.classList.add("border-l");
-                arrow.classList.add("border-t");
+                // arrow.classList.add("border-t");
             }, 300);
         }
     }, []);
@@ -407,6 +407,8 @@ const Datepicker = (props: DatepickerType) => {
               ? popupClassName
               : defaultPopupClassName;
     }, [popupClassName]);
+
+    console.log(popupClassNameOverload);
 
     return (
         <DatepickerContext.Provider value={contextValues}>
