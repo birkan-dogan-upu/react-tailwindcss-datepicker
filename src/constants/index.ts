@@ -66,7 +66,7 @@ export const BG_COLOR: Colors = {
         yellow: "bg-yellow-200",
         red: "bg-red-200",
         purple: "bg-primary-200",
-        amber: "bg-[#fde68a	]",
+        amber: "bg-[#fde68a]",
         lime: "bg-lime-200",
         green: "bg-green-200",
         emerald: "bg-[#a7f3d0]",

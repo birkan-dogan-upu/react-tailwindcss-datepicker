@@ -408,8 +408,6 @@ const Datepicker = (props: DatepickerType) => {
               : defaultPopupClassName;
     }, [popupClassName]);
 
-    console.log(popupClassNameOverload);
-
     return (
         <DatepickerContext.Provider value={contextValues}>
             <div className={containerClassNameOverload} ref={containerRef}>
