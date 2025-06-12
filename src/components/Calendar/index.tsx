@@ -48,7 +48,6 @@ const Calendar = (props: Props) => {
         period,
         changePeriod,
         changeDayHover,
-        showFooter,
         changeDatepickerValue,
         hideDatepicker,
         asSingle,
@@ -127,9 +126,7 @@ const Calendar = (props: Props) => {
 
                 if (asSingle) {
                     newEnd = day;
-                    if (!showFooter) {
-                        chosePeriod(day, day);
-                    }
+                    chosePeriod(day, day);
                 }
             } else {
                 if (period.start && !period.end) {
@@ -146,14 +143,12 @@ const Calendar = (props: Props) => {
                     newEnd = condition ? period.end : day;
                 }
 
-                if (!showFooter) {
-                    if (newStart && newEnd) {
-                        chosePeriod(newStart, newEnd);
-                    }
+                if (newStart && newEnd) {
+                    chosePeriod(newStart, newEnd);
                 }
             }
 
-            if (!(newEnd && newStart) || showFooter) {
+            if (!(newEnd && newStart)) {
                 changePeriod({
                     start: newStart,
                     end: newEnd
@@ -174,7 +169,6 @@ const Calendar = (props: Props) => {
             hideDatepicker,
             period.end,
             period.start,
-            showFooter,
             input
         ]
     );
