@@ -71,7 +71,6 @@ interface DatepickerStore {
     updateFirstDate: (date: Date) => void;
 
     value: DateValueType;
-    monthSelect: boolean;
 }
 
 const DatepickerContext = createContext<DatepickerStore>({
@@ -124,8 +123,7 @@ const DatepickerContext = createContext<DatepickerStore>({
 
     updateFirstDate: () => {},
 
-    value: null,
-    monthSelect: false
+    value: null
 });
 
 export default DatepickerContext;

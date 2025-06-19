@@ -53,13 +53,12 @@ const Calendar = (props: Props) => {
         asSingle,
         i18n,
         startWeekOn,
-        input,
-        monthSelect
+        input
     } = useContext(DatepickerContext);
     loadLanguageModule(i18n);
 
     // States
-    const [showMonths, setShowMonths] = useState(true);
+    const [showMonths, setShowMonths] = useState(false);
     const [showYears, setShowYears] = useState(false);
     const [year, setYear] = useState(date.getFullYear());
 
@@ -68,14 +67,18 @@ const Calendar = (props: Props) => {
         if (showMonths) setShowMonths(false);
     }, [showMonths]);
 
+    const hideYears = useCallback(() => {
+        if (showYears) setShowYears(false);
+    }, [showYears]);
+
     const clickMonth = useCallback(
         (month: number) => {
             setTimeout(() => {
                 changeMonth(month);
-                setShowMonths(monthSelect || !showMonths);
+                setShowMonths(!showMonths);
             }, 250);
         },
-        [changeMonth, showMonths, monthSelect]
+        [changeMonth, showMonths]
     );
 
     const clickYear = useCallback(
@@ -83,10 +86,9 @@ const Calendar = (props: Props) => {
             setTimeout(() => {
                 changeYear(year);
                 setShowYears(!showYears);
-                setShowMonths(monthSelect || !showMonths);
             }, 250);
         },
-        [changeYear, showYears, monthSelect, showMonths]
+        [changeYear, showYears]
     );
 
     const clickDay = useCallback(
@@ -257,16 +259,8 @@ const Calendar = (props: Props) => {
                     <div className="w-1/2 flex justify-center items-center text-secondary-700 font-semibold text-base">
                         <RoundedButton
                             onClick={() => {
-                                if (monthSelect) {
-                                    setShowMonths(true);
-                                    setShowYears(false);
-                                    return;
-                                }
-                                if (!monthSelect) {
-                                    setShowMonths(!showMonths);
-                                    setShowYears(false);
-                                    return;
-                                }
+                                setShowMonths(!showMonths);
+                                hideYears();
                             }}
                         >
                             {dateFormat(date, "MMM", i18n)}
