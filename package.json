@@ -84,5 +84,8 @@
     },
     "files": [
         "dist"
-    ]
+    ],
+    "dependencies": {
+        "next": "^15.3.4"
+    }
 }
