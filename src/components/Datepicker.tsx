@@ -388,7 +388,8 @@ const Datepicker = (props: DatepickerType) => {
         toggleClassName,
         toggleIcon,
         value,
-        firstGotoDate
+        firstGotoDate,
+        monthSelect
     ]);
 
     const containerClassNameOverload = useMemo(() => {

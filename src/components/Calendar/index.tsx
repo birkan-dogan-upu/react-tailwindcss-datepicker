@@ -75,7 +75,7 @@ const Calendar = (props: Props) => {
                 setShowMonths(monthSelect || !showMonths);
             }, 250);
         },
-        [changeMonth, showMonths]
+        [changeMonth, showMonths, monthSelect]
     );
 
     const clickYear = useCallback(
@@ -86,7 +86,7 @@ const Calendar = (props: Props) => {
                 setShowMonths(monthSelect || !showMonths);
             }, 250);
         },
-        [changeYear, showYears]
+        [changeYear, showYears, monthSelect, showMonths]
     );
 
     const clickDay = useCallback(
