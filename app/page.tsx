@@ -1,6 +1,5 @@
 "use client";
 
-import Head from "next/head";
 import { useState } from "react";
 
 import Datepicker, {
@@ -48,9 +47,6 @@ export default function Playground() {
 
     return (
         <div className="px-4 py-8">
-            <Head>
-                <title>react-tailwindcss-datepicker PlayGround</title>
-            </Head>
             <h1 className="text-center font-semibold text-xl">
                 <pre className="text-gray-600 text-lg bg-gray-200 max-w-max mx-auto px-2 rounded">
                     react-tailwindcss-datepicker
