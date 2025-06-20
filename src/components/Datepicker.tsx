@@ -74,7 +74,8 @@ const Datepicker = (props: DatepickerType) => {
         toggleIcon = undefined,
 
         useRange = true,
-        value = null
+        value = null,
+        monthSelect = false
     } = props;
 
     // Refs
@@ -352,7 +353,8 @@ const Datepicker = (props: DatepickerType) => {
             toggleClassName,
             toggleIcon,
             updateFirstDate: (newDate: Date) => firstGotoDate(newDate),
-            value
+            value,
+            monthSelect
         };
     }, [
         minDate,
@@ -386,7 +388,8 @@ const Datepicker = (props: DatepickerType) => {
         toggleClassName,
         toggleIcon,
         value,
-        firstGotoDate
+        firstGotoDate,
+        monthSelect
     ]);
 
     const containerClassNameOverload = useMemo(() => {
