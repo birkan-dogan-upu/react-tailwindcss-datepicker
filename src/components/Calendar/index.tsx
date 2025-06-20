@@ -79,8 +79,23 @@ const Calendar = (props: Props) => {
                 // setShowMonths(!showMonths);
                 setShowMonths(monthSelect || !showMonths);
             }, 250);
+
+            if (monthSelect) {
+                const start = new Date(year, month - 1, 1);
+                const end = new Date(year, month, 0);
+
+                changeDatepickerValue(
+                    {
+                        startDate: start,
+                        endDate: end
+                    },
+                    input
+                );
+
+                hideDatepicker();
+            }
         },
-        [changeMonth, showMonths, monthSelect]
+        [changeMonth, showMonths, monthSelect, year, input, changeDatepickerValue, hideDatepicker]
     );
 
     const clickYear = useCallback(

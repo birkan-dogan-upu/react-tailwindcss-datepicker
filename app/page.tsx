@@ -43,6 +43,7 @@ export default function Playground() {
     const [startFrom, setStartFrom] = useState(dateFormat(new Date(), "YYYY-MM-DD") || "");
     const [startWeekOn, setStartWeekOn] = useState<WeekStringType>("mon");
     const [required, setRequired] = useState(false);
+    const [monthSelect, setMonthSelect] = useState(false);
     const [popoverDirection, setPopoverDirection] = useState<PopoverDirectionType>("down");
 
     return (
@@ -138,6 +139,7 @@ export default function Playground() {
                     //         return `p-4 border-t border-gray-600 flex flex-row flex-wrap justify-end`;
                     //     }
                     // }}
+                    monthSelect={monthSelect}
                 />
             </div>
             <div className="py-4 max-w-3xl mx-auto flex flex-row flex-wrap">
@@ -237,6 +239,20 @@ export default function Playground() {
                             />
                             <label className="block" htmlFor="required">
                                 Required
+                            </label>
+                        </div>
+                    </div>
+                    <div className="mb-2 w-1/2 tx3:w-full">
+                        <div className="inline-flex items-center">
+                            <input
+                                type="checkbox"
+                                className="mr-2 rounded"
+                                id="monthSelect"
+                                checked={monthSelect}
+                                onChange={e => setMonthSelect(e.target.checked)}
+                            />
+                            <label className="block" htmlFor="monthSelect">
+                                As Monthly
                             </label>
                         </div>
                     </div>
